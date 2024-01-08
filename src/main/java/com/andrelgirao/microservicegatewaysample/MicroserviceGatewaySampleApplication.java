@@ -20,6 +20,7 @@ public class MicroserviceGatewaySampleApplication {
 		return builder
 				.routes()
 				.route(r -> r.path("/clientes/**").uri("lb://msclients-sample"))
+				.route(r -> r.path("/cartoes/**").uri("lb://mscartoes-sample"))
 				.build();
 	}
 
